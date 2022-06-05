@@ -1,19 +1,20 @@
 import "./App.css";
-import { Link } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { dark } from "@mui/material/styles/createPalette";
+import Navbar from "./components/Navbar";
+
 function App() {
+  const darkTheme = createTheme({
+    palete: {
+      mode: dark,
+    },
+  });
   return (
-    <div className="App">
-      <h1>Hello Form App</h1>
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to="Dashboard">Dashboard</Link> | {""}
-        <Link to="Users">Users</Link>
-      </nav>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <div className="App">
+        <Navbar />
+      </div>
+    </ThemeProvider>
   );
 }
 
