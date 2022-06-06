@@ -6,31 +6,35 @@ import logo from "../img/logo.jpeg";
 
 export default function Menu() {
   return (
-    <Container className="row" style={{ margin: "auto", marginTop: "5px" }}>
-      <div className="col-md-12">
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">
-            <img
-              src={logo}
-              alt="logo"
-              className="logo"
-              alt="logo"
-              style={{
-                width: "auto",
-                height: "100px",
-                padding: "10px",
-                postion: "sticky",
-              }}
-            />{" "}
-            Tech-Talk
-          </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="dashboard">Dashboard</Nav.Link>
-            <Nav.Link href="Users">Users</Nav.Link>
-            <Nav.Link href="Account">Account</Nav.Link>
-          </Nav>
-        </Navbar>
-      </div>
+    <Container
+      fluid
+      style={{
+        margin: "auto",
+        background: "orange",
+        boxShadow: "0 0 10px 0 grey",
+        borderRadius: "5px",
+      }}
+    >
+      <Navbar variant="primary">
+        <Navbar.Brand href="#home">
+          <img
+            src={logo}
+            alt="logo"
+            style={{
+              width: "auto",
+              height: "80px",
+              padding: "10px",
+              postion: "sticky",
+            }}
+          />{" "}
+          Tech-Talk
+        </Navbar.Brand>
+        <Nav className="justify-content-center flex-grow-1 pe-3">
+          <Nav.Link href="dashboard">Dashboard</Nav.Link>
+          <Nav.Link href="Users">Users</Nav.Link>
+          <Nav.Link href="Account">Account</Nav.Link>
+        </Nav>
+      </Navbar>
     </Container>
   );
 }
