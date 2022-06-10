@@ -10,7 +10,7 @@ function App() {
     },
   });
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={darkTheme} style={{ background: "black" }}>
       <div className="App">
         <Navbar />
       </div>
